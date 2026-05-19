@@ -31,25 +31,36 @@ else {
 // Interview Scenario (product companies interview question)
 // optimized code
 // nested conditions
-
 let score = 43;
-
-if(score >= 50){
+if (score >= 50) {
     // grade checking
-    if(score >= 90){
+    if (score >= 90) {
         console.log("Grade A");
-    } else if(score >= 75){
+    }
+    else if (score >= 75) {
         console.log("Grade B");
-    } else {
+    }
+    else {
         console.log("Grade C");
     }
-
-} else{
+} else {
     console.log("Fail");
 }
+// Alternate method:(Guard Clause)
+function checkGrade(score) {
+if (score < 50) {
+    return "Fail";
+}
+if (score >=90) return "Grade A";
+if (score >=75) return "Grade B";
+return "Grade C"
+}
+console.log(checkGrade(43)); // Fail
+console.log(checkGrade(85)); // Grade B
+
 
 // switch case
-let day = 7; // monday
+let day = 2; // monday
 
 switch(day){
     case 1:
@@ -68,31 +79,31 @@ switch(day){
         console.log("Invalid Day");
 }
 
-// Looping Statement
-
-// for loop
-
+// Looping Statement:-
 // 1) initial value
 // 2) conditions
 // 3) iteration
-
-
-for(let i = 0; i < 5; i++){
-    console.log(i);
+// for loop : (type: 1) - Definite Loop
+for(let i=0; i < 5; i++) {
+    console.log(i); // 0 1 2 3 4 
 }
 
-// while loop
+// while loop (type: 2) - Indefinite Loop
 let j = 1; // initial value
-
-while(j <= 5){ // condition
-    console.log(j);
-    j++; // iteration
+while(j <=5) { // condition
+    console.log(j); //  1 2 3 4 5
+    j++;  // iteration
+}
+//more example
+let playerAlive = true;
+while (playerAlive === true){
+if(score === 0){
+    playerAlive = false;
+}
 }
 
-// Do-While loop
-
+// Do-While loop (type: 3)
 let k = 1;
-
 do{
     console.log(k);
     k++;
@@ -100,15 +111,11 @@ do{
 
 // Industry scenario
 // User Authentication - Login validation
-
 let username = "narasimhan";
 let password = "narasimhan@321";
-
 let enteredUsername = "narasimha";
 let enteredPassword = "narasimhan@321";
-
 // Logical Operator (AND)
-
 if(enteredUsername === username && enteredPassword === password){
     console.log("Login Successful");
 } else {
