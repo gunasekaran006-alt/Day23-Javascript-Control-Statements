@@ -2,7 +2,6 @@
 
 // if else
 let age = 17;
-
 if(age >= 18){
     console.log("You're eligible to vote");
     console.log("Please collect your voter id proof");
@@ -11,19 +10,15 @@ if(age >= 18){
 }
 
 let marks = 30;
-
 if(marks >= 90){
     console.log("Grade A");
 } 
-
 else if(marks >= 70){
     console.log("Grade B");
 } 
-
 else if(marks >= 50){
     console.log("Grade C");
 } 
-
 else {
     console.log("Fail");
 }
